@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO On-Page -->
+    <title>Almuerzos El Gordo | Restaurante de Almuerzos Ejecutivos en Cartagena</title>
+    <meta name="description" content="Disfruta de los mejores almuerzos ejecutivos en Cartagena. Sabor casero, ingredientes frescos y atención rápida. Pide tu almuerzo hoy.">
+    <meta name="keywords" content="almuerzos ejecutivos Cartagena, restaurante Cartagena, comida casera, almuerzos El Gordo, menú del día">
+    <link rel="canonical" href="https://tusitio.com/">
+    
+    <!-- SEO Off-Page / Open Graph -->
+    <meta property="og:title" content="Almuerzos El Gordo | Almuerzos Ejecutivos en Cartagena">
+    <meta property="og:description" content="El mejor sabor casero para tu almuerzo de trabajo. Visítanos o haz tu pedido.">
+    <meta property="og:type" content="website">
+    
+    <style>
+        /* Variables y Reset */
+        :root {
+            --primary: #D32F2F; /* Rojo apetitoso */
+            --primary-dark: #B71C1C;
+            --accent: #FFC107; /* Amarillo cálido */
+            --text-dark: #212121;
+            --text-light: #757575;
+            --bg-light: #FFF8F0;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Cabecera */
+        header {
+            background-color: var(--white);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .header-phone {
+            font-weight: bold;
+            color: var(--text-dark);
+            text-decoration: none;
+        }
+
+        /* Botones */
+        .btn {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 12px 24px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background 0.3s ease;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(33, 33, 33, 0.7), rgba(33, 33, 33, 0.7)), url('https://via.placeholder.com/1920x1080/D32F2F/FFFFFF?text=Almuerzos+Ejecutivos') center/cover;
+            color: var(--white);
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Secciones */
+        .section {
+            padding: 60px 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 40px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Tarjetas */
+        .card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+            border-bottom: 4px solid var(--accent);
+        }
+
+        .card h3 {
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        /* Info & Formulario */
+        .info-container, .form-container {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .info-container p {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-dark);
+            color: var(--white);
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .header-phone { display: none; } /* Ocultar teléfono en header móvil para ahorrar espacio */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">🍽️ Almuerzos El Gordo</a>
+        <a href="tel:+573205674897" class="header-phone">📞 320 567 4897</a>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>El Sabor Casero para tu Almuerzo Ejecutivo</h1>
+            <p>Comida fresca, abundante y deliciosa. La mejor opción para tu pausa laboral en Cartagena.</p>
+            <a href="#contacto" class="btn">Pide tu almuerzo ejecutivo ahora</a>
+        </section>
+
+        <!-- Beneficios -->
+        <section class="section" style="background-color: var(--white);">
+            <h2 class="section-title">¿Por qué elegirnos?</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Sabor Auténtico</h3>
+                    <p>Preparamos cada plato con recetas tradicionales, asegurando ese sabor a casa que tanto te gusta.</p>
+                </div>
+                <div class="card">
+                    <h3>Ingredientes Frescos</h3>
+                    <p>Seleccionamos diariamente nuestras carnes, verduras y acompañamientos para garantizar la máxima calidad.</p>
+                </div>
+                <div class="card">
+                    <h3>Servicio Rápido</h3>
+                    <p>Sabemos que tu tiempo de descanso es valioso. Te atendemos con agilidad y amabilidad.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Propuesta de Valor / Servicios -->
+        <section class="section">
+            <h2 class="section-title">Nuestras Opciones</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Menú del Día</h3>
+                    <p>Un almuerzo completo y balanceado que cambia diariamente, incluye sopa, plato fuerte y bebida.</p>
+                </div>
+                <div class="card">
+                    <h3>Platos a la Carta</h3>
+                    <p>Opciones especiales y preparaciones típicas para esos días en los que quieres darte un gusto.</p>
+                </div>
+                <div class="card">
+                    <h3>Atención para Oficinas</h3>
+                    <p>Preparamos pedidos para grupos de trabajo. Contáctanos para coordinar el almuerzo de tu equipo.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prueba Social -->
+        <section class="section" style="background-color: var(--white);">
+            <h2 class="section-title">Nuestros Comensales Dicen</h2>
+            <div class="grid">
+                <div class="card" style="border-bottom: none; text-align: left; background: var(--bg-light);">
+                    <p><em>"Excelente sazón y las porciones son muy buenas. Se ha convertido en mi lugar fijo para almorzar durante el trabajo."</em></p>
+                    <p style="margin-top: 15px; font-weight: bold; color: var(--primary);">— Cliente Local</p>
+                </div>
+                <div class="card" style="border-bottom: none; text-align: left; background: var(--bg-light);">
+                    <p><em>"Muy buena atención y el menú ejecutivo siempre es variado y delicioso. 100% recomendado en Cartagena."</em></p>
+                    <p style="margin-top: 15px; font-weight: bold; color: var(--primary);">— Cliente Frecuente</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Información de Empresa y Transparencia -->
+        <section class="section">
+            <h2 class="section-title">Información de Contacto</h2>
+            <div class="info-container">
+                <p><strong>Establecimiento:</strong> Almuerzos El Gordo</p>
+                <p><strong>Responsable:</strong> Delfilia Silva Alfaro</p>
+                <p><strong>Dirección:</strong> Calle 21 #50c119, Cartagena, Colombia</p>
+                <p><strong>Teléfono:</strong> <a href="tel:+573205674897" style="color: var(--primary); text-decoration: none; font-weight: bold;">320 567 4897</a></p>
+                <p><strong>Correo Electrónico:</strong> jamesthomasmumo4374@gmail.com</p>
+                <p><strong>Horario de Atención:</strong> Todos los días de la semana de 8:00 am a 5:00 pm</p>
+            </div>
+        </section>
+
+        <!-- Formulario de Contacto -->
+        <section class="section" id="contacto" style="background-color: var(--white);">
+            <h2 class="section-title">Haz tu Pedido o Consulta</h2>
+            <div class="form-container">
+                <form id="orderForm">
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo *</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono *</label>
+                        <input type="tel" id="telefono" name="telefono" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">¿Qué deseas pedir o consultar? *</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Ej. Deseo consultar el menú de hoy..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%;">Enviar Mensaje al Restaurante</button>
+                    <p style="font-size: 0.85rem; margin-top: 15px; text-align: center; color: var(--text-light);">
+                        Tus datos son tratados de forma segura. Consulta nuestra <a href="politica-de-privacidad.html" style="color: var(--primary);">Política de Privacidad</a>.
+                    </p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Almuerzos El Gordo. Dirigido por Delfilia Silva Alfaro. Todos los derechos reservados.</p>
+        <div style="margin-top: 15px;">
+            <a href="politica-de-privacidad.html">Política de Privacidad</a> | 
+            <a href="terminos-y-condiciones.html">Términos y Condiciones</a>
+        </div>
+    </footer>
+
+    <!-- Script de validación -->
+    <script>
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Lógica para procesar el pedido (ej. enviar a WhatsApp o backend)
+            alert('¡Gracias por tu mensaje! Hemos recibido tu solicitud y te contactaremos en breve para confirmar.');
+            this.reset();
+        });
+    </script>
+
+    <!-- SEO Técnico: Schema.org para Restaurantes Locales -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Almuerzos El Gordo",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle 21 #50c119",
+        "addressLocality": "Cartagena",
+        "addressCountry": "CO"
+      },
+      "telephone": "+573205674897",
+      "email": "jamesthomasmumo4374@gmail.com",
+      "servesCuisine": "Comida Casera, Almuerzos Ejecutivos",
+      "openingHours": "Mo,Tu,We,Th,Fr,Sa,Su 08:00-17:00",
+      "owner": {
+        "@type": "Person",
+        "name": "Delfilia Silva Alfaro"
+      }
+    }
+    </script>
+
+</body>
+</html>
